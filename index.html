@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Preserved Pantry Manual — A Beautifully Illustrated, USDA-Tested Guide to Food Preservation</title>
-<meta name="description" content="34 chapters, 80 original photographs, 38 printable working sheets. Canning, dehydrating, freeze drying, fermenting, and long-term storage — cross-checked against USDA and NCHFP guidance. $29.99.">
+<title>The Preserved Pantry — Two Books for the Jars You Filled and the Cans You Bought</title>
+<meta name="description" content="The Preserved Pantry Manual: 34 chapters on canning, dehydrating, freeze drying and fermenting, cross-checked against USDA and NCHFP guidance. The Preserved Pantry Cookbook: 60 chapters and 273 recipes, every one written for a home jar or a store can. $29.99 each, $44.99 together.">
 <link rel="canonical" href="https://preservedpantrybooks.com/">
 <meta name="theme-color" content="#17110C">
 <link rel="icon" type="image/png" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
-<meta property="og:type" content="product">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="The Preserved Pantry">
 <meta property="og:url" content="https://preservedpantrybooks.com/">
-<meta property="og:title" content="The Preserved Pantry Manual — 34 Chapters, 80 Photographs, USDA-Tested">
-<meta property="og:description" content="Canning, dehydrating, freeze drying, fermenting, and long-term storage — every processing time cross-checked against USDA and NCHFP guidance. Includes 38 printable working sheets. Instant PDF download.">
+<meta property="og:title" content="The Preserved Pantry — Put It Up, Then Eat It">
+<meta property="og:description" content="Two books. One puts the food up: 34 chapters, USDA-tested. One gets it eaten: 60 chapters, 273 recipes, every one written for a home jar or a store can. $44.99 for the pair.">
 <meta property="og:image" content="https://preservedpantrybooks.com/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Preserved Pantry Manual — USDA-Tested Food Preservation">
-<meta name="twitter:description" content="34 chapters. 80 original photographs. 38 printable working sheets. Every method cross-checked against USDA and NCHFP guidance.">
+<meta name="twitter:title" content="The Preserved Pantry — Two Books">
+<meta name="twitter:description" content="Put the food up, then eat it. 34 chapters of tested preservation, 60 chapters and 273 recipes of pantry cooking.">
 <meta name="twitter:image" content="https://preservedpantrybooks.com/assets/og.jpg">
 <script src="https://payhip.com/payhip.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,6 +65,7 @@ img { max-width: 100%; display: block; height: auto; }
 /* ---------------- HERO ---------------- */
 .hero {
   position: relative;
+  overflow: hidden;
   min-height: 100vh;
   display: flex; align-items: center;
   background:
@@ -179,6 +180,13 @@ section { padding: 110px 0; }
 }
 .mgrid .mrow:nth-child(odd) { border-right: 1px solid rgba(42,33,25,0.18); padding-right: 28px; }
 .mgrid .mrow:nth-child(even) { padding-left: 28px; }
+.twogrid { display: grid; grid-template-columns: 1fr 0.85fr; gap: 54px; align-items: center; }
+@media (max-width: 760px) {
+  .mgrid { grid-template-columns: 1fr; }
+  .mgrid .mrow:nth-child(odd) { border-right: none; padding-right: 0; }
+  .mgrid .mrow:nth-child(even) { padding-left: 0; }
+  .twogrid { grid-template-columns: 1fr; gap: 34px; }
+}
 .mrow .part-num { font-family: 'Fraunces', serif; font-size: 13px; color: var(--copper); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
 .mrow .part-name { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; color: var(--wood-black); }
 .mrow .part-desc { font-size: 15px; color: var(--ink); opacity: 0.65; display: block; margin-top: 3px; }
@@ -327,6 +335,167 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
   .hero { padding-top: 110px; text-align: left; }
   section { padding: 74px 0; }
 }
+
+/* ---------------- SHELF: the three offers ---------------- */
+.shelf { background: linear-gradient(180deg, var(--wood-dark), var(--wood-black) 60%); }
+.offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; align-items: stretch; }
+.offer {
+  position: relative; display: flex; flex-direction: column;
+  background: linear-gradient(180deg, rgba(242,233,216,0.055), rgba(242,233,216,0.02));
+  border: 1px solid rgba(201,168,96,0.22); border-radius: 4px; padding: 30px 26px 28px 26px;
+}
+.offer.best {
+  border-color: var(--gold); background: linear-gradient(180deg, rgba(201,168,96,0.13), rgba(242,233,216,0.03));
+  box-shadow: 0 26px 60px -26px rgba(201,168,96,0.45);
+}
+.offer .ribbon {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--gold); color: var(--wood-black); font-family: 'Fraunces', serif; font-weight: 700;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 7px 16px; border-radius: 2px;
+  white-space: nowrap; box-shadow: 0 8px 18px -6px rgba(0,0,0,0.6);
+}
+.offer .shot { display: flex; justify-content: center; align-items: flex-end; gap: 12px; min-height: 210px; margin: 10px 0 22px 0; }
+.offer .shot img {
+  width: 128px; border-radius: 2px;
+  box-shadow: 0 26px 46px -18px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.06);
+}
+.offer.best .shot img:first-child { transform: rotate(-4deg) translateY(6px); }
+.offer.best .shot img:last-child { transform: rotate(4deg); }
+.offer .kicker { font-family: 'EB Garamond', serif; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.offer h3 { font-size: 25px; color: var(--cream); margin: 8px 0 6px 0; line-height: 1.14; }
+.offer .oneline { font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: var(--copper-bright); margin-bottom: 18px; }
+.offer ul { list-style: none; margin: 0 0 24px 0; }
+.offer li { font-size: 16.5px; color: var(--parchment); opacity: 0.9; padding: 7px 0 7px 24px; position: relative; line-height: 1.42; }
+.offer li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 7px; height: 7px; background: var(--copper); border-radius: 50%; }
+.offer .card-foot { margin-top: auto; }
+.offer .pricerow { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+.offer .pricerow .now { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--cream); }
+.offer .pricerow .save { font-size: 13px; color: var(--gold); letter-spacing: 0.06em; }
+.offer .btn { width: 100%; text-align: center; padding: 15px 20px; }
+.offer.best .btn { background: var(--gold); color: var(--wood-black); font-weight: 700; }
+.offer.best .btn:hover { background: #d8b96f; }
+.offer .under { font-size: 12.5px; color: var(--parchment); opacity: 0.5; margin-top: 10px; text-align: center; }
+.offer.soon { opacity: 0.97; }
+.offer .soonbtn {
+  display: block; width: 100%; text-align: center; padding: 15px 20px; border-radius: 3px;
+  border: 1px dashed rgba(201,168,96,0.5); color: var(--gold); font-size: 15px; letter-spacing: 0.06em;
+}
+@media (max-width: 1020px) { .offers { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } .offer.best { order: -1; } }
+
+/* ---------------- COMPARE ---------------- */
+.compare { background: var(--parchment); color: var(--ink); }
+.compare h2 { color: var(--wood-black); }
+.ctab { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 16.5px; }
+.ctab th, .ctab td { padding: 15px 14px; border-bottom: 1px solid rgba(42,33,25,0.16); text-align: left; vertical-align: top; }
+.ctab thead th { font-family: 'Fraunces', serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--copper); border-bottom: 2px solid rgba(181,113,78,0.5); }
+.ctab td:first-child { font-family: 'Fraunces', serif; font-weight: 600; color: var(--wood-black); width: 30%; }
+.ctab tbody tr:last-child td { border-bottom: none; }
+.ctab .dl { display: inline-block; margin-top: 6px; font-family: 'Fraunces', serif; font-size: 12px;
+  letter-spacing: 0.09em; text-transform: uppercase; color: var(--copper); }
+.ctab .dl::before { content: '\2193'; margin-right: 5px; font-size: 13px; }
+@media (max-width: 720px) { .ctab, .ctab thead, .ctab tbody, .ctab th, .ctab td, .ctab tr { display: block; }
+  .ctab thead { display: none; }
+  .ctab tr { border-bottom: 1px solid rgba(42,33,25,0.2); padding: 10px 0; }
+  .ctab td { border: none; padding: 5px 0; }
+  .ctab td:first-child { width: auto; font-size: 18px; padding-top: 12px; }
+  .ctab td[data-l]::before { content: attr(data-l) " — "; color: var(--copper); font-family: 'Fraunces', serif; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+}
+
+/* ---------------- FAQ ---------------- */
+.faq { background: var(--wood-black); }
+.qgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; align-content: start; }
+.q { border-top: 1px solid rgba(201,168,96,0.2); }
+.q summary { list-style: none; cursor: pointer; padding: 24px 38px 24px 0; position: relative; }
+.q summary::-webkit-details-marker { display: none; }
+.q summary::after {
+  content: '+'; position: absolute; right: 2px; top: 22px; width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif; font-size: 20px; line-height: 1; color: var(--copper);
+  transition: transform 0.25s ease;
+}
+.q[open] summary::after { transform: rotate(45deg); }
+.q summary:hover h4 { color: var(--gold); }
+.q h4 {
+  font-family: 'Fraunces', serif; font-size: 18.5px; color: var(--cream); font-weight: 600;
+  line-height: 1.3; margin: 0; transition: color 0.2s ease; padding-right: 6px;
+}
+.q .q-a { padding: 0 0 26px 0; }
+.q .q-a p { font-size: 16.5px; color: var(--parchment); opacity: 0.78; line-height: 1.55; margin: 0; }
+@media (max-width: 860px) { .qgrid { grid-template-columns: 1fr; } }
+
+/* ---------------- BUNDLE POPUP ---------------- */
+.pop-veil { position: fixed; inset: 0; background: rgba(12,9,7,0.78); backdrop-filter: blur(3px);
+  display: flex; align-items: center; justify-content: center; padding: 24px; z-index: 900;
+  opacity: 0; pointer-events: none; transition: opacity .35s ease; }
+.pop-veil.on { opacity: 1; pointer-events: auto; }
+.pop { position: relative; background: var(--wood-black); border: 1px solid rgba(201,168,96,0.34);
+  border-radius: 3px; max-width: 486px; width: 100%; padding: 40px 38px 34px 38px; text-align: center;
+  box-shadow: 0 50px 100px -24px rgba(0,0,0,0.9); transform: translateY(14px) scale(.985);
+  transition: transform .35s cubic-bezier(.2,.7,.3,1); max-height: 90vh; overflow-y: auto; }
+.pop-veil.on .pop { transform: none; }
+.pop .eyebrow { color: var(--gold); }
+.pop h3 { font-family: 'Fraunces', serif; font-size: 29px; color: var(--cream); line-height: 1.16;
+  margin: 12px 0 14px 0; font-weight: 600; }
+.pop h3 em { font-style: italic; color: var(--copper-bright); }
+.pop p { font-size: 16px; color: var(--parchment); opacity: .8; line-height: 1.55; margin-bottom: 14px; }
+.pop .covers { display: flex; justify-content: center; gap: 10px; margin: 4px 0 18px 0; }
+.pop .covers img { width: 88px; border-radius: 2px; box-shadow: 0 16px 30px -10px rgba(0,0,0,.85); }
+.pop .price { font-family: 'Fraunces', serif; font-size: 34px; color: var(--cream); margin-bottom: 4px; }
+.pop .price s { font-size: 18px; color: var(--parchment); opacity: .5; margin-left: 8px; font-family: inherit; }
+.pop .btn { background: var(--gold); color: var(--wood-black); font-weight: 700; font-size: 17.5px;
+  padding: 16px 36px; width: 100%; box-sizing: border-box; margin-top: 12px; }
+.pop .no { display: inline-block; margin-top: 15px; background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 14.5px; color: var(--parchment); opacity: .55;
+  text-decoration: underline; text-underline-offset: 3px; }
+.pop .no:hover { opacity: .85; }
+.pop .x { position: absolute; top: 12px; right: 14px; background: none; border: none; cursor: pointer;
+  font-size: 26px; line-height: 1; color: var(--parchment); opacity: .45; padding: 6px 10px; }
+.pop .x:hover { opacity: 1; color: var(--gold); }
+@media (max-width: 520px) { .pop { padding: 34px 24px 28px 24px; } .pop h3 { font-size: 25px; } }
+@media (prefers-reduced-motion: reduce) {
+  .pop-veil, .pop { transition: none; } }
+
+/* ---------------- MID-SCROLL CTA ---------------- */
+.midcta { background: var(--wood-black); border-top: 1px solid rgba(201,168,96,0.16);
+  border-bottom: 1px solid rgba(201,168,96,0.16); padding: 44px 0; }
+.midcta .inner { display: flex; align-items: center; justify-content: center;
+  gap: 34px; flex-wrap: wrap; text-align: left; }
+.midcta .line { font-family: 'Fraunces', serif; font-size: 22px; color: var(--cream);
+  line-height: 1.28; margin: 0; max-width: 430px; }
+.midcta .line em { font-style: italic; color: var(--copper-bright); }
+.midcta .sub { font-size: 14.5px; color: var(--parchment); opacity: .6; margin: 8px 0 0 0; }
+.midcta .btn { background: var(--gold); color: var(--wood-black); font-weight: 700;
+  font-size: 17px; padding: 15px 34px; white-space: nowrap; }
+@media (max-width: 700px) { .midcta .inner { flex-direction: column; text-align: center; gap: 20px; }
+  .midcta .line { max-width: none; } }
+
+/* ---------------- PAIR BAND ---------------- */
+.pairband { background: var(--wood-black); padding: 84px 0 88px 0; }
+.pairband figure { margin: 0; max-width: 900px; margin-inline: auto; }
+.pairband img { width: 100%; height: auto; display: block; border-radius: 3px;
+  box-shadow: 0 44px 84px -24px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,222,182,0.08); }
+.pairband figcaption { text-align: center; margin-top: 16px; font-family: 'Fraunces', serif;
+  font-style: italic; font-size: 15px; color: var(--parchment); opacity: 0.62; }
+
+/* author holding both books, in the closing block */
+.ctaportrait { width: 268px; max-width: 62%; height: auto; display: block; margin: 0 auto 28px auto;
+  border-radius: 3px; box-shadow: 0 32px 60px -20px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,222,182,0.10); }
+
+/* ---------------- TWO-BOOK HERO ---------------- */
+/* hero photo of the two books */
+.cover-frame img.herobooks {
+  width: 100%; max-width: none; height: auto; display: block; border-radius: 3px;
+  transform: none;
+  box-shadow: 0 48px 90px -24px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,222,182,0.12);
+}
+
+
+/* ---------------- FOOTER ---------------- */
+.foot { background: var(--wood-black); padding: 56px 0 64px 0; border-top: 1px solid rgba(201,168,96,0.18); }
+.foot .wrap { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; align-items: center; }
+.foot p { font-size: 14.5px; color: var(--parchment); opacity: 0.55; }
+.foot a { color: var(--gold); text-decoration: none; }
+.foot a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -335,33 +504,171 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">A Beautifully Illustrated, USDA-Tested Guide</span>
-      <h1>The Preserved<br>Pantry <em>Manual</em></h1>
-      <p class="sub">Canning, dehydrating, freeze drying, fermenting, and long-term storage — every method, every processing time, cross-checked against USDA and NCHFP guidance.</p>
+      <span class="eyebrow">Two Books &middot; One Shelf</span>
+      <h1>Put the food up.<br>Then <em>actually eat it.</em></h1>
+      <p class="sub">One book gets the jars filled and sealed safely. The other turns those
+      jars &mdash; and the cans you bought on the way home &mdash; into dinner on a Tuesday in February.</p>
       <div class="statrow">
-        <div><span class="n">34</span><span class="l">Chapters</span></div>
-        <div><span class="n">80</span><span class="l">Photographs</span></div>
-        <div><span class="n">221</span><span class="l">Pages</span></div>
-        <div><span class="n">38</span><span class="l">Printables</span></div>
+        <div><span class="n">94</span><span class="l">Chapters</span></div>
+        <div><span class="n">273</span><span class="l">Recipes</span></div>
+        <div><span class="n">199</span><span class="l">Photographs</span></div>
+        <div><span class="n">38</span><span class="l">Printable Sheets</span></div>
       </div>
       <div class="ctarow">
-        <span class="price">$29.99</span>
-        <a href="https://payhip.com/b/UJzsh" class="btn payhip-buy-button" data-theme="none" data-product="UJzsh">Get the Manual →</a>
+        <a href="#shelf" class="btn">See both books</a>
+        <div class="price"><span class="was">$59.98</span>$44.99 <span style="font-size:15px;opacity:.6;">together</span></div>
       </div>
-      <div class="instant">Instant PDF download &middot; readable on any device</div>
+      <p class="instant">Instant PDF download &middot; read on any device &middot; yours to keep</p>
     </div>
     <div class="cover-frame">
-      <span class="cover-badge">80 Photos<br>Inside</span>
-      <img src="assets/cover.webp" width="700" height="1050" fetchpriority="high" decoding="async" alt="The Preserved Pantry Manual — book cover">
+      <img class="herobooks" src="assets/books_topdown.webp" width="1150" height="766"
+           alt="The Preserved Pantry Manual and Cookbook lying side by side on a dark wooden table">
     </div>
+  </div>
+</section>
+
+
+<!-- THE SHELF: three offers -->
+<section class="shelf" id="shelf">
+  <div class="wrap">
+    <div class="sec-head" style="max-width:720px;">
+      <div class="rule"></div>
+      <h2>Take one, or take the pair</h2>
+      <p>They are built to work together &mdash; the Manual fills the jar, the Cookbook empties it &mdash;
+      but each one stands on its own.</p>
+    </div>
+
+    <div class="offers">
+
+      <!-- MANUAL -->
+      <div class="offer">
+        <div class="shot"><img src="assets/cover.webp" alt="The Preserved Pantry Manual"></div>
+        <span class="kicker">Book One</span>
+        <h3>The Preserved Pantry Manual</h3>
+        <p class="oneline">How to put it up, and not poison anyone.</p>
+        <ul>
+          <li>34 chapters across canning, dehydrating, freeze drying, fermenting and cold storage</li>
+          <li>Every processing time cross-checked against USDA and NCHFP guidance</li>
+          <li>Around 80 photographs, and the altitude tables you actually need</li>
+          <li>38 printable working sheets bound into the back &mdash; logs, labels, charts</li>
+          <li>261 pages</li>
+        </ul>
+        <div class="card-foot">
+          <div class="pricerow"><span class="now">$29.99</span></div>
+          <a href="https://payhip.com/b/UJzsh" class="btn payhip-buy-button" data-theme="none" data-product="UJzsh">Get the Manual</a>
+          <p class="under">Instant PDF download</p>
+        </div>
+      </div>
+
+      <!-- BUNDLE -->
+      <div class="offer best">
+        <span class="ribbon">Best value &middot; save $15</span>
+        <div class="shot">
+          <img src="assets/cover.webp" alt="The Preserved Pantry Manual">
+          <img src="assets/cookbook.webp" alt="The Preserved Pantry Cookbook">
+        </div>
+        <span class="kicker">Both Books</span>
+        <h3>The Complete Preserved Pantry</h3>
+        <p class="oneline">The whole loop &mdash; garden to jar to supper.</p>
+        <ul>
+          <li>Everything in both books, nothing held back</li>
+          <li>94 chapters, 273 recipes, 199 photographs</li>
+          <li>The 38-sheet printable pack included</li>
+          <li>805 pages in total</li>
+          <li>One download, both files</li>
+        </ul>
+        <div class="card-foot">
+          <div class="pricerow"><span class="now">$44.99</span><span class="save">instead of $59.98</span></div>
+          <a href="https://payhip.com/order?link=1kqMG" class="btn">Get both books</a>
+          <p class="under">Instant PDF download &middot; both books, one checkout</p>
+        </div>
+      </div>
+
+      <!-- COOKBOOK -->
+      <div class="offer">
+        <div class="shot"><img src="assets/cookbook.webp" alt="The Preserved Pantry Cookbook"></div>
+        <span class="kicker">Book Two</span>
+        <h3>The Preserved Pantry Cookbook</h3>
+        <p class="oneline">How to eat it, once it is on the shelf.</p>
+        <ul>
+          <li>60 chapters and 273 recipes, from slow cooker suppers to the month-of-meals plan</li>
+          <li>Every recipe written twice at once &mdash; your home-canned amount and the store-can equivalent, side by side</li>
+          <li>The meat swap: every meat recipe works from a jar, a fresh cut, or the freezer</li>
+          <li>Two indexes, including one organised by the jar in your hand</li>
+          <li>544 pages</li>
+        </ul>
+        <div class="card-foot">
+          <div class="pricerow"><span class="now">$29.99</span></div>
+          <a href="https://payhip.com/b/FxytT" class="btn payhip-buy-button" data-theme="none" data-product="FxytT">Get the Cookbook</a>
+          <p class="under">Instant PDF download</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <h2>Which one do you need?</h2>
+      <p>Honestly, most people need both &mdash; but not always at the same time.</p>
+    </div>
+    <table class="ctab">
+      <thead>
+        <tr><th></th><th>The Manual</th><th>The Cookbook</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>What it does</td>
+          <td data-l="Manual">Gets food safely onto the shelf and keeps it there. You want to store
+          food in a safe way, and you want to know how</td>
+          <td data-l="Cookbook">Gets what is on the shelf onto the table</td>
+        </tr>
+        <tr>
+          <td>Buy this one if</td>
+          <td data-l="Manual">You have a garden, a bulk buy, or a freezer you do not trust &mdash;
+          or you simply want food put away, just in case</td>
+          <td data-l="Cookbook">You have jars or cans and dinner is still a question</td>
+        </tr>
+        <tr>
+          <td>Do you need a canner?</td>
+          <td data-l="Manual">Yes and no. Some foods have to be pressure canned; plenty do not.
+          The book teaches several ways to store food safely and tells you which one each food needs</td>
+          <td data-l="Cookbook">No. Nothing here goes back into a jar</td>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td data-l="Manual">261 pages, 34 chapters<br><span class="dl">Instant download</span></td>
+          <td data-l="Cookbook">544 pages, 60 chapters, 273 recipes<br><span class="dl">Instant download</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- MID CTA 1 — right after the reader decides which book -->
+<section class="midcta">
+  <div class="wrap inner">
+    <div>
+      <p class="line">Still deciding? <em>Take the pair and save $15.</em></p>
+      <p class="sub">Both books, one checkout &middot; 805 pages &middot; instant PDF download</p>
+    </div>
+    <a href="https://payhip.com/order?link=1kqMG" class="btn">Get both books &mdash; $44.99</a>
   </div>
 </section>
 
 <!-- STAT STRIP -->
 <div class="stripband">
   <div class="track">
-    <span>CANNING <span class="dot">&middot;</span> DEHYDRATING <span class="dot">&middot;</span> FREEZE DRYING <span class="dot">&middot;</span> FERMENTING <span class="dot">&middot;</span> ROOT CELLARING <span class="dot">&middot;</span> LONG-TERM STORAGE <span class="dot">&middot;</span></span>
-    <span>CANNING <span class="dot">&middot;</span> DEHYDRATING <span class="dot">&middot;</span> FREEZE DRYING <span class="dot">&middot;</span> FERMENTING <span class="dot">&middot;</span> ROOT CELLARING <span class="dot">&middot;</span> LONG-TERM STORAGE <span class="dot">&middot;</span></span>
+    <span>USDA &amp; NCHFP cross-checked <b class="dot">&middot;</b> 94 chapters <b class="dot">&middot;</b>
+    273 recipes <b class="dot">&middot;</b> every recipe works from a jar or a can <b class="dot">&middot;</b>
+    38 printable sheets <b class="dot">&middot;</b> instant PDF <b class="dot">&middot;</b></span>
+    <span>USDA &amp; NCHFP cross-checked <b class="dot">&middot;</b> 94 chapters <b class="dot">&middot;</b>
+    273 recipes <b class="dot">&middot;</b> every recipe works from a jar or a can <b class="dot">&middot;</b>
+    38 printable sheets <b class="dot">&middot;</b> instant PDF <b class="dot">&middot;</b></span>
   </div>
 </div>
 
@@ -392,7 +699,7 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
   <div class="wrap">
     <div class="sec-head">
       <div class="rule" style="background:var(--copper)"></div>
-      <span class="eyebrow" style="color:var(--copper)">Everything In One Manual</span>
+      <span class="eyebrow" style="color:var(--copper)">Inside the Manual</span>
       <h2>Seven parts. One shelf.</h2>
       <p>You won&rsquo;t need a second book for the next method.</p>
     </div>
@@ -443,6 +750,100 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
 </section>
 
 <!-- WHY / PULLQUOTE -->
+
+<!-- INSIDE THE COOKBOOK -->
+<section class="methods" style="background:var(--wood-black);">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <h2 style="color:var(--cream);">Inside the Cookbook</h2>
+      <p style="color:var(--parchment);opacity:.78;">Eight parts, sixty chapters, 273 recipes &mdash;
+      and every single one written for the jar you filled <em>and</em> the can you bought.</p>
+    </div>
+    <div class="mgrid" style="border-color:rgba(201,168,96,0.22);">
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part One</span>
+        <div><span class="part-name" style="color:var(--cream);">The Pantry Kitchen</span>
+        <span class="part-desc" style="color:var(--parchment);">Ten things that turn a can into dinner, and the one safety rule that carries over.</span></div>
+      </div>
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part Two</span>
+        <div><span class="part-name" style="color:var(--cream);">The Slow Cooker</span>
+        <span class="part-desc" style="color:var(--parchment);">Twelve dump-and-go dinners and eight soups. No chopping board required.</span></div>
+      </div>
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part Three</span>
+        <div><span class="part-name" style="color:var(--cream);">Tomatoes, Beans and the Everyday Cans</span>
+        <span class="part-desc" style="color:var(--parchment);">Twelve dinners from one shelf of tomatoes. The rinse question, settled.</span></div>
+      </div>
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part Four</span>
+        <div><span class="part-name" style="color:var(--cream);">Meat, Any Way You Have It</span>
+        <span class="part-desc" style="color:var(--parchment);">Jarred, fresh or frozen &mdash; the conversion table and the timing rule that trips everyone up.</span></div>
+      </div>
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part Five</span>
+        <div><span class="part-name" style="color:var(--cream);">The Dry Cupboard</span>
+        <span class="part-desc" style="color:var(--parchment);">Rice, pasta, beans and flour. Dry beans versus canned, answered honestly.</span></div>
+      </div>
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part Six</span>
+        <div><span class="part-name" style="color:var(--cream);">What You Put Up Yourself</span>
+        <span class="part-desc" style="color:var(--parchment);">Tomato powder, dried vegetables, jam as a pan sauce, and the pickle brine you were throwing away.</span></div>
+      </div>
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part Seven</span>
+        <div><span class="part-name" style="color:var(--cream);">The Old Table</span>
+        <span class="part-desc" style="color:var(--parchment);">Depression kitchens, farmhouse suppers and church potlucks &mdash; they solved this first.</span></div>
+      </div>
+      <div class="mrow" style="border-color:rgba(201,168,96,0.22);">
+        <span class="part-num">Part Eight</span>
+        <div><span class="part-name" style="color:var(--cream);">The Plans</span>
+        <span class="part-desc" style="color:var(--parchment);">A month of meals, the $50 week, the power outage, and what runs out first.</span></div>
+      </div>
+    </div>
+
+    <figure style="margin:70px 0 0 0;">
+      <img src="assets/cookbook_partopener.webp" alt="The opening spread of Part One, The Pantry Kitchen, from The Preserved Pantry Cookbook"
+           width="1600" height="1196" loading="lazy" decoding="async"
+           style="width:100%;height:auto;border-radius:2px;box-shadow:0 34px 64px -22px rgba(0,0,0,.8);display:block;">
+      <figcaption style="text-align:center;margin-top:14px;font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--parchment);opacity:.65;">
+        Part One opens the book &mdash; then Chapter One opens with the cupboard it was written from.</figcaption>
+    </figure>
+
+    <div class="twogrid" style="margin-top:56px;">
+      <figure style="margin:0;">
+        <img src="assets/cookbook_spread.webp" alt="A recipe page from The Preserved Pantry Cookbook, tomato and white bean soup, shown beside the facing page of text"
+             width="1600" height="1196" loading="lazy" decoding="async"
+             style="width:100%;height:auto;border-radius:2px;box-shadow:0 34px 64px -22px rgba(0,0,0,.8);display:block;">
+      </figure>
+      <div>
+        <h3 style="font-size:28px;color:var(--cream);margin-bottom:16px;">Written twice at once</h3>
+        <p style="color:var(--parchment);opacity:.82;font-size:17.5px;margin-bottom:16px;">
+          Every ingredient list carries two lines. <b style="color:var(--copper-bright);">YOURS</b> is the
+          home-canned amount off your own shelf. <b style="color:var(--sage);">STORE</b> is the same thing
+          in supermarket sizes. Use either. Mix them in the same pot.</p>
+        <p style="color:var(--parchment);opacity:.82;font-size:17.5px;">
+          And where meat is involved the recipe forks, because canned meat is already cooked and goes in
+          last, while raw meat goes in first and needs the hours. Same dinner, opposite timing &mdash;
+          marked at the step where the two paths split.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA 2 — after the Cookbook has been shown from the inside -->
+<section class="midcta">
+  <div class="wrap inner">
+    <div>
+      <p class="line">273 recipes, and every one works <em>from a jar or a can.</em></p>
+      <p class="sub">The Cookbook on its own is $29.99 &middot; with the Manual, $44.99 for both</p>
+    </div>
+    <a href="https://payhip.com/b/FxytT" class="btn payhip-buy-button" data-theme="none"
+       data-product="FxytT">Get the Cookbook &mdash; $29.99</a>
+  </div>
+</section>
+
 <section class="why">
   <div class="wrap why-grid">
     <figure class="author-photo">
@@ -540,25 +941,182 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
 </section>
 
 <!-- FINAL CTA -->
-<section class="finalcta" id="buy">
+
+<!-- FAQ -->
+<section class="pairband">
   <div class="wrap">
-    <img src="assets/cover.webp" width="700" height="1050" loading="lazy" decoding="async" alt="The Preserved Pantry Manual cover">
-    <h2>Stock a pantry you can trust.</h2>
-    <p class="lede">34 chapters. 80 photographs. 38 printable working sheets. Every method cross-checked against USDA guidance.</p>
-    <div class="ctarow" style="justify-content:center;">
-      <span class="price">$29.99</span>
-      <a href="https://payhip.com/b/UJzsh" class="btn payhip-buy-button" data-theme="none" data-product="UJzsh">Get the Manual →</a>
-    </div>
-    <div class="guarantee">Instant digital download &middot; PDF, readable on any device</div>
+    <figure>
+      <img src="assets/books_backsplash.webp" width="1150" height="766" loading="lazy" decoding="async"
+           alt="The Preserved Pantry Cookbook and Manual standing side by side on a kitchen counter against a white tile backsplash">
+      <figcaption>Two books, one shelf &mdash; the pair that fills the jars and then empties them.</figcaption>
+    </figure>
   </div>
 </section>
 
-<footer>
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <h2>Before you buy</h2>
+      <p>The questions worth answering straight.</p>
+    </div>
+    <div class="qgrid">
+      <details class="q" open>
+        <summary><h4>What exactly do I get?</h4></summary>
+        <div class="q-a"><p>PDF files, downloaded immediately after checkout. No app, no login, no shipping, no
+        subscription and no upsells afterward &mdash; you pay once. Read them on a phone, a tablet,
+        a laptop, or print the pages you want in the kitchen.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>Can I print these at home? Will the pages fill 8.5×11 paper?</h4></summary>
+        <div class="q-a"><p>Both books are laid out at 6&times;9&nbsp;&mdash; a standard book trim, not a full letter
+        page &mdash; so on an 8.5&times;11 sheet the page sits with a border of white around it rather
+        than running edge to edge. Print at "actual size" and that border becomes a deliberate margin:
+        room to three-hole-punch for a binder, jot a note or an ingredient swap next to a recipe, or
+        just give the page somewhere to be handled without smudging the text. If you want the page as
+        large as the sheet allows instead, choose "fit to printable area" in the print dialog; it will
+        still leave a thin margin on two sides, since 6&times;9 and 8.5&times;11 are not quite the same
+        shape.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>Is the canning information actually safe?</h4></summary>
+        <div class="q-a"><p>Every processing time, pressure and headspace figure in the Manual is cross-checked
+        against the USDA Complete Guide to Home Canning and the National Center for Home Food
+        Preservation. Where a popular method is not tested, the book says so plainly instead of
+        repeating it.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>Do I need special equipment?</h4></summary>
+        <div class="q-a"><p>For the Manual, a water bath canner covers most of it; a pressure canner is required
+        for low-acid food and the book explains exactly why. The Cookbook needs nothing but a
+        pot, a skillet and, for one part of it, a slow cooker.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>I do not can anything. Is the Cookbook still for me?</h4></summary>
+        <div class="q-a"><p>Yes, and that is deliberate. Every ingredient list gives the home-canned amount and
+        the supermarket equivalent side by side. If you have never sealed a jar in your life,
+        every recipe still works from cans off the shelf.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>Have the recipes been tested?</h4></summary>
+        <div class="q-a"><p>They are cross-checked for method and for food safety, and they have not each been
+        individually kitchen-tested. That is stated inside the book too. Cooking times and
+        seasoning are starting points &mdash; your cooker and your taste will move them.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>Is this a survival or prepper book?</h4></summary>
+        <div class="q-a"><p>The Manual covers long-term storage honestly, including a three-month pantry. But
+        neither book is written for a collapse. This is food you eat in an ordinary week,
+        which is the only reason a pantry is ever worth keeping.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>Can I buy one now and the other later?</h4></summary>
+        <div class="q-a"><p>Yes. They are sold separately for that reason. The bundle simply saves $15 if you
+        already know you want both.</p></div>
+      </details>
+      <details class="q">
+        <summary><h4>What if it is not what I expected?</h4></summary>
+        <div class="q-a"><p>Reply to your receipt within 7 days and you will get a refund. No form to fill in
+        and no reason required. It is a short window because these are digital files &mdash; once a
+        PDF is downloaded it cannot be handed back &mdash; so have a look soon after you buy.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="finalcta" id="buy">
+  <div class="wrap" style="text-align:center;max-width:760px;">
+    <img class="ctaportrait" src="assets/avatar_books.webp" width="820" height="1232" loading="lazy" decoding="async"
+         alt="The author holding both The Preserved Pantry Manual and Cookbook in her kitchen">
+    <span class="eyebrow">The whole shelf</span>
+    <h2 style="font-size:clamp(32px,4.4vw,52px);color:var(--cream);line-height:1.08;margin-bottom:20px;">
+      Fill the jars. Then eat what is in them.</h2>
+    <p style="font-size:19px;color:var(--parchment);opacity:.82;margin-bottom:34px;">
+      94 chapters, 273 recipes, 199 photographs and 38 printable working sheets &mdash;
+      805 pages across two books, for $15 less than buying them apart.</p>
+    <div class="ctarow" style="justify-content:center;">
+      <a href="https://payhip.com/order?link=1kqMG" class="btn"
+         style="font-size:19px;padding:18px 44px;background:var(--gold);color:var(--wood-black);font-weight:700;">
+         Get both books &mdash; $44.99</a>
+    </div>
+    <p class="instant" style="margin-top:18px;">Instant download &middot; no subscription, no upsells &middot; 7-day refund, no questions</p>
+    <p style="margin-top:26px;font-size:15px;opacity:.55;">
+      Or take them one at a time &mdash;
+      <a href="#shelf" style="color:var(--gold);">the Manual or the Cookbook, $29.99 each</a>.</p>
+  </div>
+</section>
+
+<footer class="foot">
   <div class="wrap">
     <div class="wordmark">The Preserved <span>Pantry</span></div>
-    <div class="fine">&copy; The Preserved Pantry. Cross-checked against USDA &amp; NCHFP guidance. Not a substitute for current official publications.</div>
+    <p><a href="mailto:jasonandkippi8799@gmail.com">Questions? Email us</a></p>
+  </div>
+  <div class="wrap" style="margin-top:22px;">
+    <div class="fine" style="font-size:13px;color:var(--parchment);opacity:.45;">
+      &copy; 2026 The Preserved Pantry. Instant digital delivery via Payhip.
+      Cross-checked against USDA &amp; NCHFP guidance. Not a substitute for current official publications.</div>
   </div>
 </footer>
+
+<!-- BUNDLE POPUP -->
+<div class="pop-veil" id="popveil" role="dialog" aria-modal="true" aria-labelledby="poptitle" hidden>
+  <div class="pop">
+    <button class="x" id="popx" aria-label="Close">&times;</button>
+    <span class="eyebrow">Before you go</span>
+    <div class="covers">
+      <img src="assets/cover.webp" alt="The Preserved Pantry Manual">
+      <img src="assets/cookbook.webp" alt="The Preserved Pantry Cookbook">
+    </div>
+    <h3 id="poptitle">Take the pair and <em>save $15.</em></h3>
+    <p>Both books together &mdash; 94 chapters, 273 recipes and the 38-sheet printable pack.
+    805 pages, one checkout, downloaded the moment you buy.</p>
+    <div class="price">$44.99 <s>$59.98</s></div>
+    <a href="https://payhip.com/order?link=1kqMG" class="btn">Get both books</a>
+    <br><button class="no" id="popno">No thanks &mdash; keep reading</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  var KEY = 'pp_bundle_pop_seen';
+  var veil = document.getElementById('popveil');
+  if (!veil) return;
+
+  function seen() { try { return sessionStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+  function mark() { try { sessionStorage.setItem(KEY, '1'); } catch (e) {} }
+
+  function isOpen() { return !veil.hidden; }
+  function show() {
+    if (isOpen() || seen()) return;
+    mark();
+    veil.hidden = false;
+    requestAnimationFrame(function () { veil.classList.add('on'); });
+    document.body.style.overflow = 'hidden';
+    var x = document.getElementById('popx'); if (x) x.focus();
+  }
+  function hide() {
+    if (!isOpen()) return;
+    veil.classList.remove('on');
+    document.body.style.overflow = '';
+    setTimeout(function () { veil.hidden = true; }, 350);
+  }
+
+  document.getElementById('popx').addEventListener('click', hide);
+  document.getElementById('popno').addEventListener('click', hide);
+  veil.addEventListener('click', function (e) { if (e.target === veil) hide(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+
+  // don't interrupt someone already at the checkout cards
+  if (!seen()) setTimeout(function () {
+    var shelf = document.getElementById('shelf');
+    if (shelf) {
+      var r = shelf.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) { setTimeout(show, 6000); return; }
+    }
+    show();
+  }, 12000);
+})();
+</script>
 
 </body>
 </html>
