@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Preserved Pantry — Two Books for the Jars You Filled and the Cans You Bought</title>
-<meta name="description" content="The Preserved Pantry Manual: 34 chapters on canning, dehydrating, freeze drying and fermenting, cross-checked against USDA and NCHFP guidance. The Preserved Pantry Cookbook: 60 chapters and 273 recipes, every one written for a home jar or a store can. $29.99 each, $44.99 together.">
+<meta name="description" content="The Preserved Pantry Manual: 34 chapters on canning, dehydrating, freeze drying and fermenting, cross-checked against USDA and NCHFP guidance. The Preserved Pantry Cookbook: 60 chapters and 273 recipes, every one written for a home jar or a store can. $19.99 each, $29.99 together.">
 <link rel="canonical" href="https://preservedpantrybooks.com/">
 <meta name="theme-color" content="#17110C">
 <link rel="icon" type="image/png" href="assets/icon.png">
@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="The Preserved Pantry">
 <meta property="og:url" content="https://preservedpantrybooks.com/">
 <meta property="og:title" content="The Preserved Pantry — Put It Up, Then Eat It">
-<meta property="og:description" content="Two books. One puts the food up: 34 chapters, USDA-tested. One gets it eaten: 60 chapters, 273 recipes, every one written for a home jar or a store can. $44.99 for the pair.">
+<meta property="og:description" content="Two books. One puts the food up: 34 chapters, USDA-tested. One gets it eaten: 60 chapters, 273 recipes, every one written for a home jar or a store can. $29.99 for the pair.">
 <meta property="og:image" content="https://preservedpantrybooks.com/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -439,7 +439,7 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
 .pop h3 em { font-style: italic; color: var(--copper-bright); }
 .pop p { font-size: 16px; color: var(--parchment); opacity: .8; line-height: 1.55; margin-bottom: 14px; }
 .pop .covers { display: flex; justify-content: center; gap: 10px; margin: 4px 0 18px 0; }
-.pop .covers img { width: 88px; border-radius: 2px; box-shadow: 0 16px 30px -10px rgba(0,0,0,.85); }
+.pop .covers img.covers-photo { width: 100%; max-width: 360px; border-radius: 6px; box-shadow: 0 22px 44px -12px rgba(0,0,0,.9); }
 .pop .price { font-family: 'Fraunces', serif; font-size: 34px; color: var(--cream); margin-bottom: 4px; }
 .pop .price s { font-size: 18px; color: var(--parchment); opacity: .5; margin-left: 8px; font-family: inherit; }
 .pop .btn { background: var(--gold); color: var(--wood-black); font-weight: 700; font-size: 17.5px;
@@ -500,32 +500,96 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Two Books &middot; One Shelf</span>
-      <h1>Put the food up.<br>Then <em>actually eat it.</em></h1>
-      <p class="sub">One book gets the jars filled and sealed safely. The other turns those
-      jars &mdash; and the cans you bought on the way home &mdash; into dinner on a Tuesday in February.</p>
-      <div class="statrow">
-        <div><span class="n">94</span><span class="l">Chapters</span></div>
-        <div><span class="n">273</span><span class="l">Recipes</span></div>
-        <div><span class="n">199</span><span class="l">Photographs</span></div>
-        <div><span class="n">38</span><span class="l">Printable Sheets</span></div>
-      </div>
-      <div class="ctarow">
-        <a href="#shelf" class="btn">See both books</a>
-        <div class="price"><span class="was">$59.98</span>$44.99 <span style="font-size:15px;opacity:.6;">together</span></div>
-      </div>
-      <p class="instant">Instant PDF download &middot; read on any device &middot; yours to keep</p>
-    </div>
-    <div class="cover-frame">
-      <img class="herobooks" src="assets/books_topdown.webp" width="1150" height="766"
-           alt="The Preserved Pantry Manual and Cookbook lying side by side on a dark wooden table">
-    </div>
+<!-- URGENCY BANNER -->
+<div id="urgency-banner" class="urgency-banner">
+  <div class="urgency-track" id="urgency-track">
+    <span class="urgency-set">
+      <span class="urgency-item"><strong>SALE PRICE ENDS SOON</strong></span>
+      <span class="urgency-item">TIME LEFT: <span class="urgency-clock">12:00:00</span></span>
+      <span class="urgency-item"><strong>SALE PRICE ENDS SOON</strong></span>
+      <span class="urgency-item">TIME LEFT: <span class="urgency-clock">12:00:00</span></span>
+      <span class="urgency-item"><strong>SALE PRICE ENDS SOON</strong></span>
+      <span class="urgency-item">TIME LEFT: <span class="urgency-clock">12:00:00</span></span>
+    </span>
+    <span class="urgency-set" aria-hidden="true">
+      <span class="urgency-item"><strong>SALE PRICE ENDS SOON</strong></span>
+      <span class="urgency-item">TIME LEFT: <span class="urgency-clock">12:00:00</span></span>
+      <span class="urgency-item"><strong>SALE PRICE ENDS SOON</strong></span>
+      <span class="urgency-item">TIME LEFT: <span class="urgency-clock">12:00:00</span></span>
+      <span class="urgency-item"><strong>SALE PRICE ENDS SOON</strong></span>
+      <span class="urgency-item">TIME LEFT: <span class="urgency-clock">12:00:00</span></span>
+    </span>
   </div>
-</section>
+</div>
+<style>
+.urgency-banner {
+  position: sticky; top: 0; z-index: 999;
+  background: var(--gold);
+  color: var(--wood-black);
+  font-family: 'EB Garamond', serif;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(23,17,12,0.25);
+}
+.urgency-track {
+  display: inline-flex;
+  width: max-content;
+  animation: urgency-scroll 26s linear infinite;
+  padding: 10px 0;
+}
+.urgency-track:hover { animation-play-state: paused; }
+.urgency-set { display: inline-flex; align-items: center; flex-shrink: 0; }
+.urgency-item {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0 28px;
+  position: relative;
+}
+.urgency-item::after {
+  content: "\2022";
+  position: absolute;
+  right: -3px;
+  opacity: 0.55;
+}
+.urgency-item strong { color: var(--wood-black); }
+.urgency-clock { font-variant-numeric: tabular-nums; font-weight: 700; }
+@keyframes urgency-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (max-width: 640px) {
+  .urgency-item { font-size: 13px; padding: 0 18px; }
+}
+</style>
+<script>
+(function () {
+  // 12-hour sale window.
+  var totalSeconds = 12 * 60 * 60;
+  var remaining = totalSeconds;
+  function render() {
+    if (remaining < 0) remaining = 0;
+    var h = Math.floor(remaining / 3600);
+    var m = Math.floor((remaining % 3600) / 60);
+    var s = remaining % 60;
+    function pad(n) { return String(n).padStart(2, '0'); }
+    var formatted = pad(h) + ':' + pad(m) + ':' + pad(s);
+    var clocks = document.querySelectorAll('.urgency-clock');
+    for (var i = 0; i < clocks.length; i++) {
+      clocks[i].textContent = formatted;
+    }
+  }
+  render();
+  var timer = setInterval(function () {
+    remaining -= 1;
+    render();
+    if (remaining <= 0) {
+      clearInterval(timer);
+    }
+  }, 1000);
+})();
+</script>
 
 
 <!-- THE SHELF: three offers -->
@@ -554,7 +618,7 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
           <li>261 pages</li>
         </ul>
         <div class="card-foot">
-          <div class="pricerow"><span class="now">$29.99</span></div>
+          <div class="pricerow"><span class="now">$19.99</span></div>
           <a href="https://payhip.com/b/UJzsh" class="btn payhip-buy-button" data-theme="none" data-product="UJzsh">Get the Manual</a>
           <p class="under">Instant PDF download</p>
         </div>
@@ -562,7 +626,7 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
 
       <!-- BUNDLE -->
       <div class="offer best">
-        <span class="ribbon">Best value &middot; save $15</span>
+        <span class="ribbon">Best value &middot; save $10</span>
         <div class="shot">
           <img src="assets/cover.webp" alt="The Preserved Pantry Manual">
           <img src="assets/cookbook.webp" alt="The Preserved Pantry Cookbook">
@@ -578,7 +642,7 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
           <li>One download, both files</li>
         </ul>
         <div class="card-foot">
-          <div class="pricerow"><span class="now">$44.99</span><span class="save">instead of $59.98</span></div>
+          <div class="pricerow"><span class="now">$29.99</span><span class="save">instead of $39.98</span></div>
           <a href="https://payhip.com/order?link=1kqMG" class="btn">Get both books</a>
           <p class="under">Instant PDF download &middot; both books, one checkout</p>
         </div>
@@ -598,7 +662,7 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
           <li>544 pages</li>
         </ul>
         <div class="card-foot">
-          <div class="pricerow"><span class="now">$29.99</span></div>
+          <div class="pricerow"><span class="now">$19.99</span></div>
           <a href="https://payhip.com/b/FxytT" class="btn payhip-buy-button" data-theme="none" data-product="FxytT">Get the Cookbook</a>
           <p class="under">Instant PDF download</p>
         </div>
@@ -607,6 +671,34 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
     </div>
   </div>
 </section>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Two Books &middot; One Shelf</span>
+      <h1>Put the food up.<br>Then <em>actually eat it.</em></h1>
+      <p class="sub">One book gets the jars filled and sealed safely. The other turns those
+      jars &mdash; and the cans you bought on the way home &mdash; into dinner on a Tuesday in February.</p>
+      <div class="statrow">
+        <div><span class="n">94</span><span class="l">Chapters</span></div>
+        <div><span class="n">273</span><span class="l">Recipes</span></div>
+        <div><span class="n">199</span><span class="l">Photographs</span></div>
+        <div><span class="n">38</span><span class="l">Printable Sheets</span></div>
+      </div>
+      <div class="ctarow">
+        <a href="#shelf" class="btn">See both books</a>
+        <div class="price"><span class="was">$39.98</span>$29.99 <span style="font-size:15px;opacity:.6;">together</span></div>
+      </div>
+      <p class="instant">Instant PDF download &middot; read on any device &middot; yours to keep</p>
+    </div>
+    <div class="cover-frame">
+      <img class="herobooks" src="assets/books_topdown.webp" width="1150" height="766"
+           alt="The Preserved Pantry Manual and Cookbook lying side by side on a dark wooden table">
+    </div>
+  </div>
+</section>
+
 
 <!-- COMPARE -->
 <section class="compare">
@@ -653,10 +745,10 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
 <section class="midcta">
   <div class="wrap inner">
     <div>
-      <p class="line">Still deciding? <em>Take the pair and save $15.</em></p>
+      <p class="line">Still deciding? <em>Take the pair and save $10.</em></p>
       <p class="sub">Both books, one checkout &middot; 805 pages &middot; instant PDF download</p>
     </div>
-    <a href="https://payhip.com/order?link=1kqMG" class="btn">Get both books &mdash; $44.99</a>
+    <a href="https://payhip.com/order?link=1kqMG" class="btn">Get both books &mdash; $29.99</a>
   </div>
 </section>
 
@@ -837,10 +929,10 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
   <div class="wrap inner">
     <div>
       <p class="line">273 recipes, and every one works <em>from a jar or a can.</em></p>
-      <p class="sub">The Cookbook on its own is $29.99 &middot; with the Manual, $44.99 for both</p>
+      <p class="sub">The Cookbook on its own is $19.99 &middot; with the Manual, $29.99 for both</p>
     </div>
     <a href="https://payhip.com/b/FxytT" class="btn payhip-buy-button" data-theme="none"
-       data-product="FxytT">Get the Cookbook &mdash; $29.99</a>
+       data-product="FxytT">Get the Cookbook &mdash; $19.99</a>
   </div>
 </section>
 
@@ -1011,7 +1103,7 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
       </details>
       <details class="q">
         <summary><h4>Can I buy one now and the other later?</h4></summary>
-        <div class="q-a"><p>Yes. They are sold separately for that reason. The bundle simply saves $15 if you
+        <div class="q-a"><p>Yes. They are sold separately for that reason. The bundle simply saves $10 if you
         already know you want both.</p></div>
       </details>
       <details class="q">
@@ -1033,16 +1125,16 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
       Fill the jars. Then eat what is in them.</h2>
     <p style="font-size:19px;color:var(--parchment);opacity:.82;margin-bottom:34px;">
       94 chapters, 273 recipes, 199 photographs and 38 printable working sheets &mdash;
-      805 pages across two books, for $15 less than buying them apart.</p>
+      805 pages across two books, for $10 less than buying them apart.</p>
     <div class="ctarow" style="justify-content:center;">
       <a href="https://payhip.com/order?link=1kqMG" class="btn"
          style="font-size:19px;padding:18px 44px;background:var(--gold);color:var(--wood-black);font-weight:700;">
-         Get both books &mdash; $44.99</a>
+         Get both books &mdash; $29.99</a>
     </div>
     <p class="instant" style="margin-top:18px;">Instant download &middot; no subscription, no upsells &middot; 7-day refund, no questions</p>
     <p style="margin-top:26px;font-size:15px;opacity:.55;">
       Or take them one at a time &mdash;
-      <a href="#shelf" style="color:var(--gold);">the Manual or the Cookbook, $29.99 each</a>.</p>
+      <a href="#shelf" style="color:var(--gold);">the Manual or the Cookbook, $19.99 each</a>.</p>
   </div>
 </section>
 
@@ -1064,13 +1156,12 @@ footer .fine { font-size: 13px; color: var(--parchment); opacity: 0.45; }
     <button class="x" id="popx" aria-label="Close">&times;</button>
     <span class="eyebrow">Before you go</span>
     <div class="covers">
-      <img src="assets/cover.webp" alt="The Preserved Pantry Manual">
-      <img src="assets/cookbook.webp" alt="The Preserved Pantry Cookbook">
+      <img class="covers-photo" src="assets/popup-photo.jpg" alt="The Preserved Pantry Manual and Cookbook side by side on a kitchen counter">
     </div>
-    <h3 id="poptitle">Take the pair and <em>save $15.</em></h3>
+    <h3 id="poptitle">Take the pair and <em>save $10.</em></h3>
     <p>Both books together &mdash; 94 chapters, 273 recipes and the 38-sheet printable pack.
     805 pages, one checkout, downloaded the moment you buy.</p>
-    <div class="price">$44.99 <s>$59.98</s></div>
+    <div class="price">$29.99 <s>$39.98</s></div>
     <a href="https://payhip.com/order?link=1kqMG" class="btn">Get both books</a>
     <br><button class="no" id="popno">No thanks &mdash; keep reading</button>
   </div>
